@@ -1,11 +1,4 @@
 #!/bin/bash
-merah="\033[1;31m"  #REDTERANG
-akuu="\033[33m"  #yello
-##
-
-clear
-
-### Yaddy Kakkoii tampan
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -23,18 +16,9 @@ green='\e[0;32m'
 ##Logo
 function LOGO() {
    echo -e "
-    ┌───────────────────────────────────────────────┐
- ───│                                               │───
- ───│    $Green┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐┌┬┐  ┬  ┬┌┬┐┌─┐$NC   │───
- ───│    $Green├─┤│ │ │ │ │└─┐│  ├┬┘│├─┘ │   │  │ │ ├┤ $NC   │───
- ───│    $Green┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘$NC   │───
-    │    ${YELLOW}Copyright${FONT} (C)$GRAY https://github.com/aripTaz$NC   │
-    └───────────────────────────────────────────────┘
-         ${RED}Autoscript xray vpn lite (multi port)${FONT}    
-${RED}Make sure the internet is smooth when installing the script${FONT}
-        "
+
 }
-# ===================
+# =
 clear
   # // Exporint IP AddressInformation
 export IP=$( curl -sS ipinfo.io/ip )
