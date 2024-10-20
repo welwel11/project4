@@ -1,4 +1,11 @@
 #!/bin/bash
+merah="\033[1;31m"  #REDTERANG
+akuu="\033[33m"  #yello
+##
+
+clear
+
+### 
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
