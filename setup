@@ -13,12 +13,6 @@ GRAY="\e[1;30m"
 NC='\e[0m'
 red='\e[1;31m'
 green='\e[0;32m'
-##Logo
-function LOGO() {
-   echo -e "
-
-}
-# =
 clear
   # // Exporint IP AddressInformation
 export IP=$( curl -sS ipinfo.io/ip )
