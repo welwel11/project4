@@ -13,6 +13,9 @@ echo ""
 echo ""
 
 # Input subdomain dari user
+function pasang_domain() {
+echo -e ""
+clear
 echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
 echo -e "${YELLOW}» SETUP DOMAIN CLOUDFLARE ${FONT}"
 echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
