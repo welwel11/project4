@@ -755,11 +755,11 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 clear
 # banner
-echo "Banner /etc/kyt.txt" >>/etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/kyt.txt"@g' /etc/default/dropbear
+echo "Banner /etc/Premium.txt" >>/etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/Premium.txt"@g' /etc/default/dropbear
 
 # Ganti Banner
-wget -O /etc/kyt.txt "${REPO}ssh/issue.net"
+wget -O /etc/Premium.txt "${REPO}ssh/Premium.txt"
 print_success "Fail2ban"
 }
 function ins_epro(){
