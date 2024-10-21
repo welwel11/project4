@@ -1022,7 +1022,5 @@ clear
 sudo hostnamectl set-hostname $username
 echo -e "${green} Script Successfull Installed"
 echo ""
-read -n 1 -s -r -p "Press ➥ Enter For Reboot  "
-echo ""
-sleep 10
+read -n 1 -s -r -p "Press Enter For Reboot  "
 reboot
