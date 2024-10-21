@@ -8,12 +8,7 @@ apt install jq curl -y
 rm -rf /root/xray/scdomain
 mkdir -p /root/xray
 clear
-echo ""
-echo ""
-echo ""
-
 # Input subdomain dari user
-clear
 echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
 echo -e "${YELLOW}» SETUP DOMAIN CLOUDFLARE ${FONT}"
 echo -e "${green} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ${FONT}"
