@@ -220,7 +220,7 @@ else
 fi
 }
 
-# myrid PROJECT
+# PROJECT
 clear
 function nginx_install() {
     # // Checking System
@@ -271,15 +271,15 @@ function base_package() {
 }
 clear
 # Fungsi input domain
-clear
-sleep 2
 function pasang_domain() {
 echo -e ""
-echo -e "Your Select Domain For Tunneling"
-echo -e ""
+clear
+echo -e "  .==========================================."
+echo -e "   |\e[1;32mSETUP DOMAIN CLOUDFLARE \e[0m|"
+echo -e "   '=========================================='"
 echo -e "     \e[1;32m1)\e[0m Pakai Domain Sendiri"
 echo -e "     \e[1;32m2)\e[0m Pakai Domain Dari Script"
-echo -e " "
+echo -e "   =========================================="
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
@@ -375,7 +375,7 @@ rm -rf /etc/vmess/.vmess.db
 #Instal Xray
 function install_xray() {
 clear
-    print_install "Core Xray 1.8.1 Latest Version"
+    print_install "Core Xray 1.8.24 Latest Version"
     # install xray
     #echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
     domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
@@ -383,7 +383,7 @@ clear
     
     # / / Ambil Xray Core Version Terbaru
 latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.8.24
  
     # // Ambil Config Server
     wget -O /etc/xray/config.json "${REPO}xray/config.json" >/dev/null 2>&1
@@ -392,7 +392,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     #chmod +x /usr/local/bin/xray
     domain=$(cat /etc/xray/domain)
     IPVS=$(cat /etc/xray/ipvps)
-    print_success "Core Xray 1.8.1 Latest Version"
+    print_success "Core Xray 1.8.24 Latest Version"
     
     # Settings UP Nginix Server
     clear
